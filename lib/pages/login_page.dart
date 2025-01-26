@@ -1,6 +1,7 @@
 import 'package:authentication/components/alternative_login.dart';
 import 'package:authentication/components/input_box.dart';
 import 'package:authentication/components/my_button.dart';
+import 'package:authentication/services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -68,7 +69,9 @@ class _LoginPageState extends State<LoginPage> {
 
   void appleLogin() {}
 
-  void googleLogin() {}
+  void googleLogin() {
+    AuthService().signInWithGoogle();
+  }
 
   @override
   Widget build(BuildContext context) {
